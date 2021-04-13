@@ -67,5 +67,16 @@ export class CdkappsyncDynamoStack extends cdk.Stack {
       ),
       responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultItem(),
     });
+    
+    dynamo_datasource.createResolver({
+      typeName: "Mutation",
+      fieldName: "deleteProduct",
+      requestMappingTemplate: appsync.MappingTemplate.dynamoDbDeleteItem(
+        "id",
+        "id"
+      ),
+      responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultItem(),
+    });
+    
   }
 }

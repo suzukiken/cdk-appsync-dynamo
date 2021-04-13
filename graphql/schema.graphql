@@ -11,4 +11,5 @@ input ProductInput {
 }
 type Mutation {
   addProduct(input: ProductInput!): Product
+  deleteProduct(id: ID!): Product
 }
