@@ -78,5 +78,14 @@ export class CdkappsyncDynamoStack extends cdk.Stack {
       responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultItem(),
     });
     
+    dynamo_datasource.createResolver({
+      typeName: "Mutation",
+      fieldName: "updateProduct",
+      requestMappingTemplate: appsync.MappingTemplate.fromFile(
+        "mapping_template/update_product.vtl"
+      ),
+      responseMappingTemplate: appsync.MappingTemplate.dynamoDbResultItem()
+    })
+    
   }
 }

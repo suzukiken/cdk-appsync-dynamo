@@ -9,7 +9,12 @@ type Query {
 input ProductInput {
   title: String!
 }
+input ProductUpdateInput {
+  id: ID!
+  title: String!
+}
 type Mutation {
   addProduct(input: ProductInput!): Product
+  updateProduct(input: ProductUpdateInput!): Product
   deleteProduct(id: ID!): Product
 }
