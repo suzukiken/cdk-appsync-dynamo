@@ -5,4 +5,4 @@ To deploy AppSync API with Dynamo DB as a datasource.
 * `npm install`
 * `cdk deploy`
 
-[description](https://figmentresearch.com/aws/cdkappsync-dynamo)
+[description](https://note.figmentresearch.com/aws/cdkappsync-dynamo)
